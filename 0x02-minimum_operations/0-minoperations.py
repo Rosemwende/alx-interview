@@ -2,7 +2,7 @@
 """
 Minimum Operations to achieve n 'H' characters using Copy All and Paste operations
 """
-def minOperations(n)
+def minOperations(n):
 if n <= 1:
         return 0
 
