@@ -3,7 +3,7 @@
 Minimum Operations to achieve n 'H' characters using Copy All and Paste operations
 """
 def minOperations(n):
-if n <= 1:
+    if n <= 1:
         return 0
 
     ops = 0
