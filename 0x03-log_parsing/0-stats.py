@@ -20,7 +20,7 @@ def print_stats():
     print("File size: {}".format(total_file_size))
     for code in sorted(status_codes_count.keys()):
         if status_codes_count[code] > 0:
-            print(f"{code}: {status_codes_count[code]}")
+            print("{}: {}".format(code, status_codes_count[code]))
 
 def process_line(line):
     """Process a single line and extract metrics"""
