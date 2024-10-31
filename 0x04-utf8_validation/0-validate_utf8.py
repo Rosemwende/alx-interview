@@ -5,7 +5,7 @@ set represents a valid UTF-8 encoding
 """
 
 def validUTF8(data):
-num_bytes = 0
+    num_bytes = 0
 
     mask1 = 1 << 7
     mask2 = 1 << 6
