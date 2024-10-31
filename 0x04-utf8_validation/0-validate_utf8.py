@@ -4,7 +4,7 @@ method that determines if a given data
 set represents a valid UTF-8 encoding
 """
 
-def validUTF8(data)
+def validUTF8(data):
 num_bytes = 0
 
     mask1 = 1 << 7
