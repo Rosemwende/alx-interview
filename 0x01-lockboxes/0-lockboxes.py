@@ -1,19 +1,11 @@
 #!/usr/bin/python3
 def canUnlockAll(boxes):
     """
-    Determines if all boxes can be opened.
-    
-    Parameters:
-    boxes (list of lists): A list of lists where each sublist represents keys in a box.
-
-    Returns:
-    bool: True if all boxes can be opened, False otherwise.
+    Write a method that determines if all boxes can be opened.
     """
-    if not isinstance(boxes, list) or not boxes:
-        return False
 
-    unlocked_boxes = set([0])
-    stack = list(boxes[0])
+    unlocked_boxes = {0}
+    stack = {0}
 
     while stack:
         key = stack.pop()
