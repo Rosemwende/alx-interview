@@ -2,6 +2,17 @@
 import sys
 
 def is_safe(board, row, col):
+    """
+    Check if it's safe to place a queen at position (row, col).
+
+    Args:
+        board (list): The current configuration of the board.
+        row (int): The row where we want to place the queen.
+        col (int): The column where we want to place the queen.
+
+    Returns:
+        bool: True if the position is safe; False otherwise.
+    """
     for r, c in board:
         if c == col or r - c == row - col or r + c == row + col:
             return False
