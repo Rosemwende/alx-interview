@@ -10,6 +10,7 @@ Returns:
           Returns an empty list if n <= 0
 """
 
+
 def pascal_triangle(n):
     """
     Generate Pascal's Triangle of size n
