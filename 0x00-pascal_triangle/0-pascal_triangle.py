@@ -11,14 +11,14 @@ Returns:
 """
 
 def pascal_triangle(n):
-"""
+    """
     Generate Pascal's Triangle of size n
 
     Args:
         n (int): The number of rows of the triangle
 
     Returns:
-       A list of lists of integers representing Pascal's Triangle
+        A list of lists of integers representing Pascal's Triangle
     """
     if n <= 0:
         return []
