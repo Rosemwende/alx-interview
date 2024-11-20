@@ -6,12 +6,12 @@ def pascal_triangle(n):
         n (int): The number of rows of the triangle
 
     Returns:
-       A list of lists of integers representing Pascal's Triangle
+        A list of lists of integers representing Pascal's Triangle
     """
     if n <= 0:
         return []
 
-    triangle = [[1]
+    triangle = [[1]]
 
     for i in range(1, n):
         prev_row = triangle[-1]
