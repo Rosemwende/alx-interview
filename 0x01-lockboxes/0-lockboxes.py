@@ -3,13 +3,14 @@
 Function that determines if all boxes can be unlocked
 """
 
+
 def canUnlockAll(boxes):
     """
     Determines if all boxes can be opened by unlocking them with keys
-    
+ 
     Args:
        A list where each list contains the keys for the boxes
-    
+ 
     Returns:
         True if all boxes can be opened, otherwise False
     """
