@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-    """Returns a list of primes up to the given limit using the Sieve of Eratosthenes"""
+"""Returns a list of primes up to the given limit using the Sieve of Eratosthenes"""
 
 
 def isWinner(x, nums):
