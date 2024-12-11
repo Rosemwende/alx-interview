@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Prime Game"""
 
 def isWinner(x, nums):
     """Determines who wins the most rounds based on the prime game rules"""
