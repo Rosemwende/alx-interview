@@ -1,14 +1,6 @@
 #!/usr/bin/python3
-
-def sieve_of_eratosthenes(limit):
     """Returns a list of primes up to the given limit using the Sieve of Eratosthenes"""
-    sieve = [True] * (limit + 1)
-    sieve[0], sieve[1] = False, False
-    for start in range(2, int(limit ** 0.5) + 1):
-        if sieve[start]:
-            for i in range(start * start, limit + 1, start):
-                sieve[i] = False
-    return [num for num, is_prime in enumerate(sieve) if is_prime]
+
 
 def isWinner(x, nums):
     """Determines who wins the most rounds based on the prime game rules"""
