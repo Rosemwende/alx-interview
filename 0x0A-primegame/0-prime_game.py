@@ -2,12 +2,12 @@
 """Prime Game"""
 
 def isWinner(x, nums):
-    """Determines who wins the most rounds based on the prime game rules."""
+    """Determines who wins the most rounds based on the prime game rules"""
     if x <= 0 or not nums:
         return None
 
     def sieve_of_eratosthenes(limit):
-        """Generates a list of prime numbers up to a given limit."""
+        """Generates a list of prime numbers up to a given limit"""
         sieve = [True] * (limit + 1)
         sieve[0] = sieve[1] = False
         for i in range(2, int(limit ** 0.5) + 1):
