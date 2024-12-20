@@ -1,35 +1,42 @@
 #!/usr/bin/python3
 """
-Determine the fewest number of coins needed to meet a given amount total
+Determine the fewest number of coins needed to meet a given amount total.
 """
+
+from collections import deque
 
 
 def makeChange(coins, total):
     """
-    Determines the fewest number of coins needed to meet a given total
+    Determines the fewest number of coins needed to meet a given total.
 
     Args:
-        coins (list): List of the values of the coins in your possession
-        total (int): The target amount to achieve with coins
+        coins (list): List of the values of the coins in your possession.
+        total (int): The target amount to achieve with coins.
 
     Returns:
         int: Fewest number of coins needed to meet the total, or -1 if
-             the total cannot be met by any combination of coins
+             the total cannot be met by any combination of coins.
     """
     if total <= 0:
         return 0
 
-    dp = [float('inf')] * (total + 1)
-    dp[0] = 0
+    coins.sort(reverse=True)
 
-    for t in range(1, total + 1):
+    queue = deque([(0, 0)])
+    visited = set()
+
+    while queue:
+        current_sum, num_coins = queue.popleft()
+
         for coin in coins:
-            if t >= coin:
-                dp[t] = min(dp[t], dp[t - coin] + 1)
+            next_sum = current_sum + coin
 
-    return dp[total] if dp[total] != float('inf') else -1
+            if next_sum == total:
+                return num_coins + 1
 
+            if next_sum < total and next_sum not in visited:
+                visited.add(next_sum)
+                queue.append((next_sum, num_coins + 1))
 
-if __name__ == "__main__":
-    print(makeChange([1, 2, 25], 37))
-    print(makeChange([1256, 54, 48, 16, 102], 1453))
+    return -1
