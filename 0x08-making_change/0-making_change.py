@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-determine the fewest number of coins needed to meet a given amount total
+Determine the fewest number of coins needed to meet a given amount total
 """
 
 
@@ -13,13 +13,13 @@ def makeChange(coins, total):
         total (int): The target amount to achieve with coins
 
     Returns:
-              Fewest number of coins needed to meet the total
-             -1 if the total cannot be met by any combination of coins
+        int: Fewest number of coins needed to meet the total, or -1 if
+             the total cannot be met by any combination of coins
     """
     if total <= 0:
         return 0
 
-    dp = [total + 1] * (total + 1)
+    dp = [float('inf')] * (total + 1)
     dp[0] = 0
 
     for t in range(1, total + 1):
@@ -27,7 +27,8 @@ def makeChange(coins, total):
             if t >= coin:
                 dp[t] = min(dp[t], dp[t - coin] + 1)
 
-    return dp[total] if dp[total] != total + 1 else -1
+    return dp[total] if dp[total] != float('inf') else -1
+
 
 if __name__ == "__main__":
     print(makeChange([1, 2, 25], 37))
