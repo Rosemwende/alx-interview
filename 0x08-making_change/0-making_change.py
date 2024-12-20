@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Determine the fewest number of coins needed to meet a given amount total.
+Determine the fewest number of coins needed to meet a given amount total
 """
 
 from collections import deque
@@ -8,15 +8,15 @@ from collections import deque
 
 def makeChange(coins, total):
     """
-    Determines the fewest number of coins needed to meet a given total.
+    Determines the fewest number of coins needed to meet a given total
 
     Args:
-        coins (list): List of the values of the coins in your possession.
-        total (int): The target amount to achieve with coins.
+        coins (list): List of the values of the coins in your possession
+        total (int): The target amount to achieve with coins
 
     Returns:
         int: Fewest number of coins needed to meet the total, or -1 if
-             the total cannot be met by any combination of coins.
+             the total cannot be met by any combination of coins
     """
     if total <= 0:
         return 0
