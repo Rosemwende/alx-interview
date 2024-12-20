@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 import sys
 
+
 def is_safe(board, row, col):
-    #Write a program that solves the N queens problem
     for r, c in board:
         if c == col or r - c == row - col or r + c == row + col:
             return False
     return True
+
 
 def solve_nqueens(N, row, board, solutions):
     if row == N:
@@ -17,6 +18,7 @@ def solve_nqueens(N, row, board, solutions):
             board.append([row, col])
             solve_nqueens(N, row + 1, board, solutions)
             board.pop()
+
 
 def main():
     if len(sys.argv) != 2:
