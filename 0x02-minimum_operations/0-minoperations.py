@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
 Minimum Operations to achieve n 'H'
-characters using Copy All and Paste operations
+characters using Copy
+All and Paste operations
 """
 
 
