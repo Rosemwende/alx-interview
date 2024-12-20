@@ -4,6 +4,7 @@ method that determines if a given data
 set represents a valid UTF-8 encoding
 """
 
+
 def validUTF8(data):
     num_bytes = 0
 
@@ -20,10 +21,8 @@ def validUTF8(data):
             while byte & mask:
                 num_bytes += 1
                 mask >>= 1
-            
             if num_bytes == 0:
                 continue
-            
             if num_bytes == 1 or num_bytes > 4:
                 return False
 
